@@ -1,4 +1,4 @@
--- Copyright 2016 The Howl Developers
+-- Copyright 2020 The Howl Developers
 -- License: MIT (see LICENSE.md at the top-level directory of the distribution)
 
 howl.util.lpeg_lexer ->
@@ -20,7 +20,7 @@ howl.util.lpeg_lexer ->
     'int16', 'int32', 'int64', 'rune', 'string', 'uint8', 'uint16', 'uint32', 'uint64',
     'complex', 'int', 'uint', 'uintptr'
   }
-  
+
   builtin = c 'function', word {
     'append', 'cap', 'close', 'complex', 'copy', 'delete', 'imag', 'len', 'make',
     'new', 'panic', 'print', 'println', 'real', 'recover'
@@ -40,7 +40,7 @@ howl.util.lpeg_lexer ->
     }
     c 'fdecl', ident
   }
-  
+
   type_def = sequence {
     c 'keyword', 'type'
     ws^1

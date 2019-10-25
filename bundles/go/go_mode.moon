@@ -1,4 +1,4 @@
--- Copyright 2016-2018 The Howl Developers
+-- Copyright 2020 The Howl Developers
 -- License: MIT (see LICENSE.md at the top-level directory of the distribution)
 {:activities, :Buffer, :config, :mode, :sys} = howl
 {:Process} = howl.io
@@ -42,7 +42,7 @@ bundle_load 'go_completer'
       return
 
     buffer = editor.buffer
-    cmd_str = string.format "#{cmd_path} -pos %s:#%d -modified -linelength 999",
+    cmd_str = string.format "#{cmd_path} -pos %s:#%d -modified",
       buffer.file,
       buffer\byte_offset(editor.cursor.pos) - 2
     success, pco = pcall Process.open_pipe, cmd_str, {

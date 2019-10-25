@@ -1,4 +1,4 @@
--- Copyright 2016-2018 The Howl Developers
+-- Copyright 2016-2020 The Howl Developers
 -- License: MIT (see LICENSE.md at the top-level directory of the distribution)
 
 {:app, :command, :config, :mode, :inspection, :sys} = howl
@@ -79,7 +79,7 @@ unload = ->
 
 return {
   info:
-    author: 'Copyright 2016-2018 The Howl Developers'
+    author: 'Copyright 2016-2020 The Howl Developers'
     description: 'Go language support'
     license: 'MIT'
   :unload

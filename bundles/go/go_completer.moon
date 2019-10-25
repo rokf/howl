@@ -1,4 +1,4 @@
--- Copyright 2016 The Howl Developers
+-- Copyright 2020 The Howl Developers
 -- License: MIT (see LICENSE.md at the top-level directory of the distribution)
 
 import config, interact from howl
@@ -23,7 +23,7 @@ run_gocode = (context) ->
       config.go_complete = false
       return nil
 
-  cmd = { exe.path, '-f=csv', 'autocomplete', context.pos-1 }
+  cmd = { exe.path, '-f=csv', '-in=' .. context.buffer.file, '-unimported-packages', 'autocomplete', context.pos-1 }
   status, out, err, process = pcall Process.execute, cmd, stdin: context.buffer.text
   unless status and process.successful
     log.error "gocode failed to execute: #{err}"

@@ -1,4 +1,4 @@
--- Copyright 2016 The Howl Developers
+-- Copyright 2020 The Howl Developers
 -- License: MIT (see LICENSE.md at the top-level directory of the distribution)
 
 {:activities, :app, :config} = howl
